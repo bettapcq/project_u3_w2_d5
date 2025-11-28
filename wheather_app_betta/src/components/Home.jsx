@@ -4,6 +4,7 @@ import CityCard from './CityCard';
 const Home = () => {
   return (
     <Container fluid className="py-5 flex-grow-1">
+          <h1 className='text-center my-3'>Explore most popular cities</h1>
       <Row>
         <Col>
           <Row>

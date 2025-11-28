@@ -49,8 +49,9 @@ const CityDetails = () => {
   return (
     <>
       <Container>
+        <h1 className='text-center my-3'>City Details</h1>
         <Row className="justify-content-center">
-          <Col xs={12} md={6}>
+          <Col xs={12} md={8}>
             {loading && <Spinner animation="grow" variant="info" />}
             {error && <Alert variant="danger" />}
             {cityWeather && (
@@ -59,7 +60,6 @@ const CityDetails = () => {
                   variant="top"
                   src="src\assets\img\weathersr.jpg"
                   alt="weathers"
-                  fluid
                 />
                 <Card.Body>
                   <Card.Title className="border border-1 p-2">
@@ -73,11 +73,10 @@ const CityDetails = () => {
                         .map((day, index) => {
                           return (
                             <ListGroup.Item key={index}>
-                              <h5>{day.dt_txt}</h5>
+                              <h5>{day.dt_txt.split(' ')[0]}</h5>
                               <br />
                               <Image
                                 src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
-                                fluid
                               />
                               <br />
                               <p>

@@ -12,6 +12,7 @@ const SearchSection = () => {
   return (
     <>
       <Container>
+        <h1 className="text-center my-3">Search you city</h1>
         <Row className="flex-column mt-3">
           <Col>
             <Form
@@ -23,7 +24,7 @@ const SearchSection = () => {
               <InputGroup className="mb-3">
                 <Form.Control
                   type="search"
-                  placeholder="Search your city"
+                  placeholder="write your city here"
                   aria-label="Search"
                   value={inputString}
                   onChange={(e) => setInputString(e.target.value)}

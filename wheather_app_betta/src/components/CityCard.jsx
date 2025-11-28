@@ -44,6 +44,7 @@ function CityCard(props) {
 
   return (
     <>
+ 
       {loading && <Spinner animation="grow" variant="info" />}
       {error && <Alert variant="danger">Ops c'è stato un errore</Alert>}
       {cityWeather && (
