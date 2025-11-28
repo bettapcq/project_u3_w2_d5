@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Spinner, Image } from 'react-bootstrap';
+import { Spinner, Alert, Image } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -37,24 +36,33 @@ function CityCard(props) {
       });
   };
 
-  useEffect(getCurrentWeather, []);
+  useEffect(() => {
+    if (city) {
+      getCurrentWeather();
+    }
+  }, [city]);
 
   return (
     <>
       {loading && <Spinner animation="grow" variant="info" />}
-      {error && <Alert variant="danger" />}
+      {error && <Alert variant="danger">Ops c'è stato un errore</Alert>}
       {cityWeather && (
-        <Card className="m-2 text-center shadow">
+        <Card className="m-2 text-center shadow h-100" fluid={true}>
           <Card.Img
             variant="top"
-            src={`https://openweathermap.org/img/wn/${cityWeather.weather[0].icon}@2x.png`}
-            alt={cityWeather.weather[0].description}
+            src="src\assets\img\weathersr.jpg"
+            alt="weathers"
           />
           <Card.Body>
             <Card.Title className="border border-1 p-2">
               {cityWeather.name}
             </Card.Title>
-            <Card.Text>
+
+            <Card.Text className="flex-grow-1">
+              <Image
+                src={`https://openweathermap.org/img/wn/${cityWeather.weather[0].icon}@2x.png`}
+                className="mh-25"
+              />
               Today's weather: {cityWeather.weather[0].description}
             </Card.Text>
             <Card.Text>

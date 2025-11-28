@@ -7,16 +7,16 @@ const Home = () => {
       <Row>
         <Col>
           <Row>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className='h-100'>
               <CityCard city="Turin" />
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className='h-100'>
               <CityCard city="Montreal" />
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className='h-100'>
               <CityCard city="Sidney" />
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className='h-100'>
               <CityCard city="Tokyo" />
             </Col>
           </Row>

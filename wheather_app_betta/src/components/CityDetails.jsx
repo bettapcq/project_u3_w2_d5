@@ -49,8 +49,8 @@ const CityDetails = () => {
   return (
     <>
       <Container>
-        <Row>
-          <Col>
+        <Row className="justify-content-center">
+          <Col xs={12} md={6}>
             {loading && <Spinner animation="grow" variant="info" />}
             {error && <Alert variant="danger" />}
             {cityWeather && (
@@ -65,7 +65,8 @@ const CityDetails = () => {
                   <Card.Title className="border border-1 p-2">
                     {cityWeather.city.name}
                   </Card.Title>
-                  <Card.Text>
+
+                  <div>
                     <ListGroup>
                       {cityWeather.list
                         .filter((item) => item.dt_txt.endsWith('12:00:00'))
@@ -73,22 +74,25 @@ const CityDetails = () => {
                           return (
                             <ListGroup.Item key={index}>
                               <h5>{day.dt_txt}</h5>
+                              <br />
                               <Image
                                 src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
                                 fluid
                               />
+                              <br />
                               <p>
-                                <strong> Weather: </strong>{' '}
-                                {day.weather[0].description} <br />{' '}
-                                <strong> Temperature: </strong> {day.main.temp}
+                                <strong>Weather: </strong>{' '}
+                                {day.weather[0].description} <br />
+                                <strong>Temperature: </strong> {day.main.temp}{' '}
                                 °C
                               </p>
                             </ListGroup.Item>
                           );
                         })}
                     </ListGroup>
-                  </Card.Text>
-                  <Link to="/" className="btn btn-info" variant="info">
+                  </div>
+
+                  <Link to="/" className="btn btn-info">
                     Go to Home
                   </Link>
                 </Card.Body>
