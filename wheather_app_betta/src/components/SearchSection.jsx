@@ -11,7 +11,7 @@ const SearchSection = () => {
 
   return (
     <>
-      <Container>
+      <Container fluid>
         <h1 className="text-center my-3">Search you city</h1>
         <Row className="flex-column mt-3">
           <Col>
