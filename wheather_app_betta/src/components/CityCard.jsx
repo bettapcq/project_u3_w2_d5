@@ -51,7 +51,7 @@ function CityCard(props) {
         <Card className="m-2 text-center shadow h-100" fluid={true}>
           <Card.Img
             variant="top"
-            src="/public/weathersr.jpg"
+            src="/weathersr.jpg"
             alt="weathers"
           />
           <Card.Body>

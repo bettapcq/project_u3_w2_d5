@@ -58,7 +58,7 @@ const CityDetails = () => {
               <Card className="m-2 text-center shadow">
                 <Card.Img
                   variant="top"
-                  src="/public/weathersr.jpg"
+                  src="/weathersr.jpg"
                   alt="weathers"
                 />
                 <Card.Body>
