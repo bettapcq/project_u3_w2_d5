@@ -10,7 +10,7 @@ const NavBar = () => {
       <Navbar expand="lg" className="app-theme">
         <Container fluid>
           <Navbar.Brand href="#">
-            <Image src="src\assets\img\logo_betta.png" fluid width={100} />
+            <Image src="/public/logo_betta.png" fluid width={100} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
